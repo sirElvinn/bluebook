@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Your custom styles */
 .academic-grid {
   background-image: radial-gradient(#DEE2E6 0.5px, transparent 0.5px);
   background-size: 24px 24px;

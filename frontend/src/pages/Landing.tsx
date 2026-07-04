@@ -1,6 +1,4 @@
-import React from 'react';
 import { Button } from '../components/Button';
-import { CheckCircle } from 'lucide-react';
 
 const Landing = () => {
   return (

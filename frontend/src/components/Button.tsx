@@ -9,8 +9,8 @@ interface ButtonProps {
 
 export const Button: React.FC<ButtonProps> = ({ children, variant = 'primary', onClick }) => {
   const style = variant === 'primary' 
-    ? "bg-primary text-white hover:bg-blue-800" 
-    : "border-2 border-primary text-primary hover:bg-primary/10";
+    ? 'bg-[#003f87] text-white hover:bg-blue-800'
+    : 'border-2 border-[#003f87] text-[#003f87] hover:bg-[#003f87]/10';
 
   return (
     <button 
