@@ -2,16 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.academic-grid {
-  background-image: radial-gradient(#DEE2E6 0.5px, transparent 0.5px);
-  background-size: 24px 24px;
-}
-
-.bluebook-shadow {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.bluebook-hover:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border-color: #003f87;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply text-gray-900 antialiased;
+  }
 }
