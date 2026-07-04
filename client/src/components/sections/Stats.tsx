@@ -1,4 +1,4 @@
-import { STATS } from '../../libs/constants'
+import { STATS } from '../../lib/constants'
 
 export const Stats = () => {
   return (

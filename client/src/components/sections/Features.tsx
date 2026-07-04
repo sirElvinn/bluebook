@@ -1,5 +1,5 @@
 import { BookOpen, BrainCircuit, BarChart3, Target } from 'lucide-react'
-import { FEATURES } from '../../libs/constants'
+import { FEATURES } from '../../lib/constants'
 
 const ICONS: Record<string, React.ReactNode> = {
   exam: <BookOpen size={22} />,

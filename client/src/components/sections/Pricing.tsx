@@ -1,6 +1,6 @@
 import { Check } from 'lucide-react'
 import { Button } from '../ui/Button'
-import { PRICING } from '../../libs/constants'
+import { PRICING } from '../../lib/constants'
 
 export const Pricing = () => {
   return (

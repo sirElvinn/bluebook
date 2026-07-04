@@ -1,4 +1,4 @@
-import { HOW_IT_WORKS } from '../../libs/constants'
+import { HOW_IT_WORKS } from '../../lib/constants'
 
 export const HowItWorks = () => {
   return (

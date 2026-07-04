@@ -1,4 +1,4 @@
-import { TESTIMONIALS } from '../../libs/constants'
+import { TESTIMONIALS } from '../../lib/constants'
 
 export const Testimonials = () => {
   return (
