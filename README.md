@@ -1,1 +1,1 @@
-<img src="./image.png">
+<img src="./client/src/assets/images/readme_header.png">
