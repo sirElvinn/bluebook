@@ -12,9 +12,9 @@ export const Navbar = () => {
 
         <a href="/" className="flex items-center gap-2 no-underline">
           <div className="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">B</span>
+            <span className="text-white font-bold text-sm">S</span>
           </div>
-          <span className="text-xl font-bold text-gray-900">Bluebook</span>
+          <span className="text-xl font-bold text-gray-900">SATitude</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
