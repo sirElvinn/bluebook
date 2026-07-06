@@ -22,5 +22,5 @@ export default function Model3D() {
     if (child.isMesh) child.material = material;
   });
 
-  return <primitive object={obj} scale={1} />;
+  return <primitive object={obj} scale={1.4} position={[0, -1.2, 0]} rotation={[0, -0.5, 0]} />;
 }
