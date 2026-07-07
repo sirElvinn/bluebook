@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Button } from '../ui/Button'
 import { NAV_LINKS } from '../../lib/constants'
+import Logo from '../../assets/svg/Logo.svg'
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -11,10 +12,7 @@ export const Navbar = () => {
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
         <a href="/" className="flex items-center gap-2 no-underline">
-          <div className="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">S</span>
-          </div>
-          <span className="text-xl font-bold text-gray-900">SATitude</span>
+          <img src={Logo} alt="SATitude Logo" className="h-14 w-auto" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
