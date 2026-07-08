@@ -11,19 +11,19 @@ export const CTA = () => {
         <p className="text-blue-200 text-lg mb-10 leading-relaxed">
           Most students improve by 80–150 points with 4 weeks of consistent practice. The sooner you start, the more time you have.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2">
           <Button
-            variant="outline"
+            variant="secondary"
             size="lg"
-            className="border-white text-white hover:bg-white hover:text-blue-700"
+            className="group shadow-lg hover:shadow-xl transition-all"
           >
             Start for free
-            <ArrowRight size={20} />
+            <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </Button>
           <Button
-            variant="ghost"
+            variant="outline-light"
             size="lg"
-            className="text-blue-200 hover:text-white hover:bg-white/10"
+            className="transition-all"
           >
             View pricing
           </Button>
