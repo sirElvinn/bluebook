@@ -91,7 +91,7 @@ export default function NotFound() {
           </div>
         </div>
         <div className="text-center text-slate-400 text-sm mt-6">
-          © 2026 Bluebook. All rights reserved.
+          © 2026 SATitude. All rights reserved.
         </div>
       </footer>
     </div>
