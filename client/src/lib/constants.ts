@@ -1,4 +1,4 @@
-export const SITE_NAME = 'Bluebook'
+export const SITE_NAME = 'SATitude'
 export const SITE_TAGLINE = 'Master the Digital SAT'
 
 export const NAV_LINKS = [
@@ -9,7 +9,7 @@ export const NAV_LINKS = [
 ]
 
 export const STATS = [
-  { value: '50,000+', label: 'students using Bluebook' },
+  { value: '50,000+', label: 'students using SATitude' },
   { value: '2,400+', label: 'practice questions' },
   { value: '94%', label: 'improved their score' },
   { value: '8', label: 'full-length practice tests' },
@@ -53,7 +53,7 @@ export const HOW_IT_WORKS = [
     step: '02',
     title: 'Get your study plan',
     description:
-      'Based on your results, Bluebook shows you exactly which skills to work on and in what order.',
+      'Based on your results, SATitude shows you exactly which skills to work on and in what order.',
   },
   {
     step: '03',
@@ -72,7 +72,7 @@ export const TESTIMONIALS = [
   {
     name: 'Marcus Webb',
     score: '1320 → 1430',
-    text: 'I tried three other apps. Bluebook is the only one that felt like the real test. The adaptive format is exactly right.',
+    text: 'I tried three other apps. SATitude is the only one that felt like the real test. The adaptive format is exactly right.',
   },
   {
     name: 'Aiko Tanaka',

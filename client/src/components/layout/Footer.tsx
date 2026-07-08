@@ -9,7 +9,7 @@ export const Footer = () => {
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">B</span>
               </div>
-              <span className="text-white font-bold text-lg">Bluebook</span>
+              <span className="text-white font-bold text-lg">SATitude</span>
             </div>
             <p className="text-sm leading-relaxed text-gray-500">
               The most realistic digital SAT prep, powered by AI tutoring.
@@ -48,7 +48,7 @@ export const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-600">© 2025 Bluebook. Not affiliated with College Board.</p>
+          <p className="text-sm text-gray-600">© 2026 SATitude. Not affiliated with College Board.</p>
           <p className="text-sm text-gray-600">Built for students, by students.</p>
         </div>
       </div>
