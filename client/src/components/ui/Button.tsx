@@ -2,7 +2,7 @@ import React from 'react'
 
 interface ButtonProps {
   children: React.ReactNode
-  variant?: 'primary' | 'outline' | 'ghost'
+  variant?: 'primary' | 'secondary' | 'outline' | 'outline-light' | 'ghost'
   size?: 'sm' | 'md' | 'lg'
   onClick?: () => void
   className?: string
@@ -24,8 +24,11 @@ export const Button: React.FC<ButtonProps> = ({
 
   const variants = {
     primary: 'bg-blue-700 text-white hover:bg-blue-800 active:scale-[0.98]',
+    secondary: 'bg-white text-blue-700 hover:bg-blue-50 active:scale-[0.98] shadow-sm',
     outline:
       'border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white active:scale-[0.98]',
+    'outline-light': 
+      'border-2 border-white/20 text-white hover:bg-white/10 active:scale-[0.98]',
     ghost: 'text-gray-600 hover:text-blue-700 hover:bg-blue-50 active:scale-[0.98]',
   }
 
