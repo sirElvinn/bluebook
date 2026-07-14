@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { Button } from '../ui/Button'
+import { HackerText } from '../ui/HackerText'
 import { NAV_LINKS } from '../../lib/constants'
-import Logo from '../../assets/svg/Logo.svg'
+
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -12,7 +14,7 @@ export const Navbar = () => {
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
         <a href="/" className="flex items-center gap-2 no-underline">
-          <img src={Logo} alt="SATitude Logo" className="h-14 w-auto" />
+          <img src="/Logo.svg" alt="SATitude Logo" className="h-14 w-auto" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -22,14 +24,18 @@ export const Navbar = () => {
               href={link.href}
               className="text-sm font-medium text-gray-600 hover:text-blue-700 transition-colors"
             >
-              {link.label}
+              <HackerText text={link.label} />
             </a>
           ))}
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="ghost" size="sm">Log in</Button>
-          <Button variant="primary" size="sm">Start for free</Button>
+          <Link to="/sign-in">
+            <Button variant="ghost" size="sm"><HackerText text="Log in" /></Button>
+          </Link>
+          <Link to="/sign-up">
+            <Button variant="primary" size="sm"><HackerText text="Start for free" /></Button>
+          </Link>
         </div>
 
         <button
@@ -50,12 +56,16 @@ export const Navbar = () => {
               className="text-sm font-medium text-gray-700 hover:text-blue-700 py-1"
               onClick={() => setMenuOpen(false)}
             >
-              {link.label}
+              <HackerText text={link.label} />
             </a>
           ))}
           <div className="flex flex-col gap-3 pt-2 border-t border-gray-100">
-            <Button variant="outline" size="sm">Log in</Button>
-            <Button variant="primary" size="sm">Start for free</Button>
+            <Link to="/sign-in">
+              <Button variant="outline" size="sm"><HackerText text="Log in" /></Button>
+            </Link>
+            <Link to="/sign-up">
+              <Button variant="primary" size="sm"><HackerText text="Start for free" /></Button>
+            </Link>
           </div>
         </div>
       )}

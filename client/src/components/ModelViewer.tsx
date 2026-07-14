@@ -17,7 +17,7 @@ function CanvasLoader() {
 
 export default function ModelViewer() {
   return (
-    <div style={{ width: '100%', height: '500px' }}>
+    <div className="w-full h-[500px]">
       <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
         <Suspense fallback={<CanvasLoader />}>
           <ambientLight intensity={0.6} />

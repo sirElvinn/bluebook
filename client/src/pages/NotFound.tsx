@@ -9,7 +9,7 @@ export default function NotFound() {
         <div className="max-w-xl">
           {/* Badge */}
           <div className="inline-block px-4 py-2 bg-blue-100 rounded-full mb-8">
-            <span className="text-blue-600 font-semibold text-sm tracking-wider">
+            <span className="text-blue-700 font-semibold text-sm tracking-wider">
               ERROR • 404
             </span>
           </div>
@@ -18,7 +18,7 @@ export default function NotFound() {
           <h1 className="text-6xl md:text-7xl font-bold text-slate-900 mb-8 leading-tight">
             Looks Like Your
             <br />
-            <span className="text-blue-600">Navigator Took an L</span>
+            <span className="text-blue-700">Navigator Took an L</span>
           </h1>
 
           {/* Description */}
@@ -30,14 +30,14 @@ export default function NotFound() {
 
           {/* Buttons */}
           <div className="flex gap-4 flex-wrap">
-            <Link 
+            <Link
               to="/"
               className="inline-block bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Back to home →
             </Link>
-            <Link 
-              to="/practice"
+            <Link
+              to="/"
               className="inline-block border-2 border-slate-900 text-slate-900 hover:bg-slate-50 px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Try a practice test
@@ -52,8 +52,7 @@ export default function NotFound() {
             <img
               src="/models/404-mascot-updated.png"
               alt="404 Mascot"
-              className="w-full h-full object-contain border-none outline-none"
-              style={{ border: 'none', outline: 'none', boxShadow: 'none' }}
+              className="w-full h-full object-contain border-none outline-none shadow-none"
             />
           </div>
         </div>

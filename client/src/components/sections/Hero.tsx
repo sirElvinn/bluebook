@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { ArrowRight, Star } from 'lucide-react'
 import { Button } from '../ui/Button'
 import { Badge } from '../ui/Badge'
@@ -5,14 +6,14 @@ import ModelViewer from '../ModelViewer'
 
 export const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-white pt-16 pb-24">
+    <section className="relative overflow-hidden bg-gradient-to-b from-blue-50/50 to-white pt-16 pb-24">
 
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: 'radial-gradient(#e2e8f0 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(#cbd5e1 1px, transparent 1px)',
           backgroundSize: '28px 28px',
-          opacity: 0.6,
+          opacity: 1,
         }}
       />
 
@@ -21,22 +22,27 @@ export const Hero = () => {
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          <div>
-            <Badge variant="blue" className="mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Badge variant="blue" className="mb-4">
               Digital SAT · New Format · 2025
             </Badge>
 
-            <h1 className="text-5xl lg:text-[3.5rem] font-bold leading-[1.1] tracking-tight text-gray-900 mb-6">
+            <h1 className="text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-gray-900 mb-6">
               Score higher on the{' '}
               <span className="text-blue-700">Digital SAT</span>{' '}
               — or your money back.
             </h1>
 
-            <p className="text-lg text-gray-500 leading-relaxed mb-10 max-w-[480px]">
+            <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-[480px]">
               Realistic Bluebook-style practice tests, an AI tutor that explains every answer, and analytics that show you exactly what to study next.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 mb-10">
+            <div className="flex flex-col sm:flex-row gap-3 mb-8">
               <Button variant="primary" size="lg">
                 Start practicing free
                 <ArrowRight size={20} />
@@ -68,9 +74,18 @@ export const Hero = () => {
                 </span>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <ModelViewer />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="relative drop-shadow-2xl"
+          >
+            <div className="absolute inset-0 bg-blue-300/30 blur-[80px] rounded-full pointer-events-none" />
+            <ModelViewer />
+          </motion.div>
 
         </div>
       </div>
