@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { Button } from '../ui/Button'
 
 export const CTA = () => {
@@ -19,14 +20,16 @@ export const CTA = () => {
           Most students improve by 80–150 points with 4 weeks of consistent practice. The sooner you start, the more time you have.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2">
-          <Button
-            variant="secondary"
-            size="lg"
-            className="group shadow-lg hover:shadow-xl transition-all"
-          >
-            Start for free
-            <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <Link to="/sign-up">
+            <Button
+              variant="secondary"
+              size="lg"
+              className="group shadow-lg hover:shadow-xl transition-all"
+            >
+              Start for free
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
           <Button
             variant="outline-light"
             size="lg"

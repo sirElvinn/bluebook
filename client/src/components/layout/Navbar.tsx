@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { Button } from '../ui/Button'
 import { HackerText } from '../ui/HackerText'
@@ -29,8 +30,12 @@ export const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="ghost" size="sm"><HackerText text="Log in" /></Button>
-          <Button variant="primary" size="sm"><HackerText text="Start for free" /></Button>
+          <Link to="/sign-in">
+            <Button variant="ghost" size="sm"><HackerText text="Log in" /></Button>
+          </Link>
+          <Link to="/sign-up">
+            <Button variant="primary" size="sm"><HackerText text="Start for free" /></Button>
+          </Link>
         </div>
 
         <button
@@ -55,8 +60,12 @@ export const Navbar = () => {
             </a>
           ))}
           <div className="flex flex-col gap-3 pt-2 border-t border-gray-100">
-            <Button variant="outline" size="sm"><HackerText text="Log in" /></Button>
-            <Button variant="primary" size="sm"><HackerText text="Start for free" /></Button>
+            <Link to="/sign-in">
+              <Button variant="outline" size="sm"><HackerText text="Log in" /></Button>
+            </Link>
+            <Link to="/sign-up">
+              <Button variant="primary" size="sm"><HackerText text="Start for free" /></Button>
+            </Link>
           </div>
         </div>
       )}
