@@ -7,13 +7,23 @@ import App from './App.tsx'
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
 if (!PUBLISHABLE_KEY) {
-  console.warn("Missing Publishable Key. Please set VITE_CLERK_PUBLISHABLE_KEY in .env.local")
+  console.warn('Missing VITE_CLERK_PUBLISHABLE_KEY. Auth pages will not work until you add it to client/.env.local')
 }
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <ClerkProvider publishableKey={PUBLISHABLE_KEY || 'missing'} afterSignOutUrl="/">
+const root = createRoot(document.getElementById('root')!)
+
+if (PUBLISHABLE_KEY) {
+  root.render(
+    <StrictMode>
+      <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+        <App />
+      </ClerkProvider>
+    </StrictMode>,
+  )
+} else {
+  root.render(
+    <StrictMode>
       <App />
-    </ClerkProvider>
-  </StrictMode>,
-)
+    </StrictMode>,
+  )
+}
