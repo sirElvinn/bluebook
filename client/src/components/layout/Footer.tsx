@@ -1,3 +1,9 @@
+import { HackerText } from '../ui/HackerText'
+
+const PRODUCT_LINKS = ['Practice Tests', 'Question Bank', 'AI Tutor', 'Analytics']
+const COMPANY_LINKS = ['About', 'Blog', 'Careers', 'Contact']
+const LEGAL_LINKS = ['Privacy Policy', 'Terms of Service', 'Cookie Policy']
+
 export const Footer = () => {
   return (
     <footer className="bg-gray-950 text-gray-400">
@@ -17,31 +23,41 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-white text-sm font-semibold mb-4">Product</h4>
+            <HackerText as="h4" text="Product" className="text-white text-sm font-semibold mb-4" />
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">Practice Tests</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Question Bank</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">AI Tutor</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Analytics</a></li>
+              {PRODUCT_LINKS.map((label) => (
+                <li key={label}>
+                  <a href="#" className="hover:text-white transition-colors">
+                    <HackerText text={label} />
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white text-sm font-semibold mb-4">Company</h4>
+            <HackerText as="h4" text="Company" className="text-white text-sm font-semibold mb-4" />
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+              {COMPANY_LINKS.map((label) => (
+                <li key={label}>
+                  <a href="#" className="hover:text-white transition-colors">
+                    <HackerText text={label} />
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white text-sm font-semibold mb-4">Legal</h4>
+            <HackerText as="h4" text="Legal" className="text-white text-sm font-semibold mb-4" />
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Cookie Policy</a></li>
+              {LEGAL_LINKS.map((label) => (
+                <li key={label}>
+                  <a href="#" className="hover:text-white transition-colors">
+                    <HackerText text={label} />
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Button } from '../ui/Button'
+import { HackerText } from '../ui/HackerText'
 import { NAV_LINKS } from '../../lib/constants'
 import Logo from '../../assets/svg/Logo.svg'
 
@@ -22,14 +23,14 @@ export const Navbar = () => {
               href={link.href}
               className="text-sm font-medium text-gray-600 hover:text-blue-700 transition-colors"
             >
-              {link.label}
+              <HackerText text={link.label} />
             </a>
           ))}
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="ghost" size="sm">Log in</Button>
-          <Button variant="primary" size="sm">Start for free</Button>
+          <Button variant="ghost" size="sm"><HackerText text="Log in" /></Button>
+          <Button variant="primary" size="sm"><HackerText text="Start for free" /></Button>
         </div>
 
         <button
@@ -50,12 +51,12 @@ export const Navbar = () => {
               className="text-sm font-medium text-gray-700 hover:text-blue-700 py-1"
               onClick={() => setMenuOpen(false)}
             >
-              {link.label}
+              <HackerText text={link.label} />
             </a>
           ))}
           <div className="flex flex-col gap-3 pt-2 border-t border-gray-100">
-            <Button variant="outline" size="sm">Log in</Button>
-            <Button variant="primary" size="sm">Start for free</Button>
+            <Button variant="outline" size="sm"><HackerText text="Log in" /></Button>
+            <Button variant="primary" size="sm"><HackerText text="Start for free" /></Button>
           </div>
         </div>
       )}
