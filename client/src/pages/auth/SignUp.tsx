@@ -13,7 +13,7 @@ export default function SignUpPage() {
               <p className="mt-4 text-sm leading-6 text-slate-600">Join and save your practice progress, AI explanations, and score analytics.</p>
             </div>
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <SignUp routing="path" path="/sign-up" />
+              <SignUp routing="path" path="/sign-up" forceRedirectUrl="/dashboard" />
             </div>
           </div>
 
