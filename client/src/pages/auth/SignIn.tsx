@@ -13,7 +13,7 @@ export default function SignInPage() {
               <p className="mt-4 text-sm leading-6 text-slate-600">Start practicing faster and keep your progress synced across sessions.</p>
             </div>
             <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-              <SignIn routing="path" path="/sign-in" />
+              <SignIn routing="path" path="/sign-in" forceRedirectUrl="/dashboard" />
             </div>
           </div>
 

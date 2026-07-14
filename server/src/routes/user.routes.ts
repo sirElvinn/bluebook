@@ -1,10 +1,13 @@
 import { Router } from 'express';
-import { getUserProfile } from '../controllers/user.controller';
+import { getUserProfile, syncUser } from '../controllers/user.controller';
 import { authLimiter } from '../middleware/rateLimiter';
 
 const router = Router();
 
-// Apply rate limiting to specific routes
+// Get user profile by clerkId (query param)
 router.get('/profile', authLimiter, getUserProfile);
+
+// Sync user to DB after Clerk sign-in (called from client)
+router.post('/sync', syncUser);
 
 export default router;
