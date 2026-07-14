@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { Check } from 'lucide-react'
 import { Button } from '../ui/Button'
 import { PRICING } from '../../lib/constants'
@@ -7,22 +8,32 @@ export const Pricing = () => {
     <section id="pricing" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <motion.div 
+          className="text-center max-w-2xl mx-auto mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <span className="text-xs font-bold uppercase tracking-widest text-blue-700 mb-4 block">
             Pricing
           </span>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Start free, upgrade when you're ready
           </h2>
-          <p className="text-gray-500 text-lg">
+          <p className="text-gray-600 text-lg">
             No credit card needed to get started. Cancel Pro anytime.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {PRICING.map((plan) => (
-            <div
+          {PRICING.map((plan, i) => (
+            <motion.div
               key={plan.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
               className={`rounded-2xl p-8 border-2 flex flex-col ${
                 plan.highlighted
                   ? 'border-blue-700 bg-blue-700 text-white'
@@ -39,14 +50,14 @@ export const Pricing = () => {
                 <h3 className={`text-xl font-bold mb-1 ${plan.highlighted ? 'text-white' : 'text-gray-900'}`}>
                   {plan.name}
                 </h3>
-                <p className={`text-sm mb-4 ${plan.highlighted ? 'text-blue-200' : 'text-gray-500'}`}>
+                <p className={`text-sm mb-4 ${plan.highlighted ? 'text-blue-200' : 'text-gray-600'}`}>
                   {plan.description}
                 </p>
                 <div className="flex items-baseline gap-1">
                   <span className={`text-5xl font-bold ${plan.highlighted ? 'text-white' : 'text-gray-900'}`}>
                     {plan.price}
                   </span>
-                  <span className={`text-sm ${plan.highlighted ? 'text-blue-200' : 'text-gray-500'}`}>
+                  <span className={`text-sm ${plan.highlighted ? 'text-blue-200' : 'text-gray-600'}`}>
                     / {plan.period}
                   </span>
                 </div>
@@ -69,7 +80,7 @@ export const Pricing = () => {
               >
                 {plan.cta}
               </Button>
-            </div>
+            </motion.div>
           ))}
         </div>
 
