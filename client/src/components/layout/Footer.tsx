@@ -1,3 +1,5 @@
+import Logo from '../../assets/svg/Logo.svg'
+
 export const Footer = () => {
   return (
     <footer className="bg-gray-950 text-gray-400">
@@ -5,12 +7,9 @@ export const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
 
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">B</span>
-              </div>
-              <span className="text-white font-bold text-lg">SATitude</span>
-            </div>
+            <a href="/" className="flex items-center gap-2 mb-4 no-underline">
+              <img src={Logo} alt="SATitude Logo" className="h-10 w-auto" />
+            </a>
             <p className="text-sm leading-relaxed text-gray-500">
               The most realistic digital SAT prep, powered by AI tutoring.
             </p>
