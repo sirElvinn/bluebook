@@ -10,9 +10,9 @@ import { CTA } from '../components/sections/CTA'
 
 const Landing = () => {
   return (
-    <div className="min-h-screen bg-white text-gray-900 antialiased">
+    <div className="landing-background min-h-screen text-slate-800 antialiased">
       <Navbar />
-      <main>
+      <main className="pb-8">
         <Hero />
         <Stats />
         <Features />
