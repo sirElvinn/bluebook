@@ -20,16 +20,16 @@ export const Button: React.FC<ButtonProps> = ({
   disabled = false,
 }) => {
   const base =
-    'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed'
+    'relative inline-flex items-center justify-center rounded-full font-extrabold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 disabled:cursor-not-allowed disabled:opacity-50 active:translate-y-[2px] active:scale-[0.97]'
 
   const variants = {
-    primary: 'bg-blue-700 text-white hover:bg-blue-800 active:scale-[0.98]',
-    secondary: 'bg-white text-blue-700 hover:bg-blue-50 active:scale-[0.98] shadow-sm',
+    primary: 'border border-white/35 bg-gradient-to-br from-[#147f9a] via-[#1ca9bd] to-[#1763a2] text-white shadow-[10px_11px_0_rgba(15,95,126,.22),14px_17px_28px_rgba(39,96,157,.17),inset_2px_2px_2px_rgba(255,255,255,.30)] hover:-translate-y-1 hover:shadow-[11px_12px_0_rgba(15,95,126,.20),17px_20px_32px_rgba(39,96,157,.20),inset_2px_2px_2px_rgba(255,255,255,.34)]',
+    secondary: 'border border-white/80 bg-[#f8f3eb] text-slate-700 shadow-[8px_9px_0_rgba(166,141,102,.10),12px_14px_25px_rgba(181,159,129,.14),inset_2px_2px_2px_white] hover:-translate-y-1 hover:bg-white',
     outline:
-      'border border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white active:scale-[0.98]',
-    'outline-light': 
-      'border-2 border-white/20 text-white hover:bg-white/10 active:scale-[0.98]',
-    ghost: 'text-gray-600 hover:text-blue-700 hover:bg-blue-50 active:scale-[0.98]',
+      'border border-slate-300/80 bg-white/70 text-slate-700 shadow-[8px_8px_18px_rgba(181,159,129,0.14),-8px_-8px_16px_rgba(255,255,255,0.82)] hover:-translate-y-0.5 hover:bg-slate-50',
+    'outline-light':
+      'border border-white/50 bg-white/10 text-white shadow-[8px_8px_16px_rgba(15,34,64,0.18),-8px_-8px_16px_rgba(255,255,255,0.18)] hover:bg-white/15',
+    ghost: 'text-slate-600 bg-transparent shadow-none hover:bg-white/70 hover:text-sky-700',
   }
 
   const sizes = {

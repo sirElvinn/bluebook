@@ -1,55 +1,49 @@
 import { motion } from 'framer-motion'
-import { Check } from 'lucide-react'
 import { HOW_IT_WORKS } from '../../lib/constants'
 
 export const HowItWorks = () => {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-
-        <motion.div 
-          className="text-center max-w-2xl mx-auto mb-16"
+    <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+      <div className="mx-auto max-w-7xl">
+        <motion.div
+          className="mx-auto mb-12 max-w-2xl text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <span className="text-xs font-bold uppercase tracking-widest text-blue-700 mb-4 block">
+          <span className="mb-4 block text-xs font-bold uppercase tracking-[0.3em] text-sky-700">
             How it works
           </span>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="mb-4 text-3xl font-extrabold text-slate-900 sm:text-4xl">
             From sign-up to score improvement
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-lg leading-8 text-slate-600">
             Most students see measurable improvement within two weeks.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid gap-6 md:grid-cols-3">
           {HOW_IT_WORKS.map((step, i) => (
-            <motion.div 
-              key={step.step} 
-              className="relative text-left group"
+            <motion.div
+              key={step.step}
+              className="clay-card relative p-8 text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
               {i < HOW_IT_WORKS.length - 1 && (
-                <div className="hidden md:block absolute top-6 left-[3.5rem] w-[calc(100%-3.5rem+2rem)] h-[2px] border-t-2 border-dashed border-gray-200 -z-10" />
+                <div className="absolute left-[calc(100%-0.5rem)] top-10 hidden h-[2px] w-6 md:block" />
               )}
-              <div className="inline-flex w-12 h-12 rounded-xl bg-blue-50 items-center justify-center mb-6 border border-blue-100 group-hover:bg-blue-600 group-hover:border-blue-600 transition-colors shadow-sm">
-                <span className="text-blue-700 font-bold text-lg group-hover:hidden">{i + 1}</span>
-                <Check className="hidden group-hover:block text-white" size={20} />
+              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-[20px] bg-gradient-to-br from-sky-100 via-cyan-50 to-white text-lg font-bold text-sky-700 shadow-[8px_8px_20px_rgba(38,100,158,0.16),-8px_-8px_18px_rgba(255,255,255,0.9)]">
+                {i + 1}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{step.title}</h3>
-              <p className="text-gray-600 leading-relaxed">
-                {step.description}
-              </p>
+              <h3 className="mb-3 text-xl font-bold text-slate-900">{step.title}</h3>
+              <p className="leading-7 text-slate-600">{step.description}</p>
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   )
